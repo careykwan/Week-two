@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+
+
+</head>
+<body>
+
+<h1>Hello World</h1>
+
+<h1>My profile</h1>
+<ul>
+	<li id="firstName"></li>
+	<li id="age"></li>
+	<li id="eyeColor"></li>
+	<li id="height"></li>
+</ul>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+
+//List your objects and their data
+// var obj = {height: "152", weight: "52"};
+// // list the function and what data you want it spit out
+// function CalculateArea(width, height){
+// 	var area = width * height;
+// 	return area;
+// }
+// // close the tag and after the tag you call your data, see below
+// var wallOne = CalculateArea(obj.height, obj.weight);
+
+// console.log(wallOne);
+
+
+
+
+//A. write the function
+// This is the function declaration
+function  myFunctionAdding(){
+	//This is the action/code block
+	var obj = {name: "Carey"};
+	obj.age = 88;
+	delete obj.age;
+	console.log(obj);
+}
+//This is a function Expression
+// var myFunctionB = function(parameterA, parameterB){
+// 	console.log(parameterA + parameterB);
+
+// }
+var myFunctionAdding = function(a, b){
+	//Action station
+	console.log("a")
+	return a + b;
+}
+console.log(myFunctionAdding(5,5));
+//B. make sure you invoke the function
+//This is me invoking a function
+// myFunction();
+// myFunctionB("Hi ", "How are you?");
+// console.log("hi" + "how are you buddy?");
+
+// function CalculateArea(width, height){
+// 	var area = width * height;
+// 	return area;
+// }
+
+// var wallOne = CalculateArea(3, 5);
+// var wallTwo = CalculateArea(8, 5);
+// console.log(wallTwo);
+
+var person = 
+	{firstName: "Carey", 
+	lastName: "Kwan", 
+	age: "30", 
+	eyeColor: "Brown", 
+	height: "152cm", 
+	color: "color", 
+	fontColor: "pink",
+	listColor: "blue",
+	font: "Helvetica", 
+	font: "font-family", 
+	depth: 152, 
+	density: 52};
+
+var firstName = document.getElementById("firstName");
+firstName.textContent = "Name:" + " " + person.firstName + " " + person.lastName;
+
+var age = document.getElementById("age");
+age.textContent = "Age:" + " " + person.age;
+
+var eyeColor = document.getElementById("eyeColor");
+eyeColor.textContent = "Eye Color:" + " " + person.eyeColor;
+
+var height = document.getElementById("height");
+height.textContent = "Height:" + " " + person.height;
+
+$("#firstName").css(person.color, person.listColor);
+
+$("#firstName").css(person.font, person.font);
+
+$("#age").css(person.color, person.listColor);
+
+$("#eyeColor").css(person.color, person.listColor);
+
+$("#height").css(person.color, person.listColor);
+
+$("h1").css(person.color, person.fontColor);
+
+
+
+// list the function and what data you want it spit out
+function CalculateArea(depth, density){
+	var bmi = depth * density;
+	return bmi;
+}
+// close the tag and after the tag you call your data, see below
+var bmi = CalculateArea(person.depth, person.density);
+
+console.log(bmi);
+
+//self invoking functions
+
+//functions act as a house or a private enviroment for varibles
+//this is a global variable, it exisits in the global scope
+var isGlobal = "I am global you access me from anywhere" 
+//variables in functions are private
+//Function Declaration
+function coverMe(){
+ //Inside
+ 	console.log(ab);
+ 	var private = "I am private";
+ 	return private;
+}
+
+coverMe();
+//Iiffe
+(function(){
+	alert("ey");//this is the inside of a self invoking function
+	var private = "I am private";
+
+})();
+
+//Function expression
+var anotherFunctionPattern = function(){
+	console.log("i am working");
+}();
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>

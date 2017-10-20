@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom Queries</title>
+</head>
+<body>
+
+	<h1 style="padding-left: 1em;">A List</h1>
+	<p id="para"></p>
+	<ul id="bigList">
+		<li class="summer">summer</li>
+		<li id="hot">hot</li>
+		<li class="summer">winter</li>
+		<li class="summer">spring</li>
+		<li class="summer">autumn</li>
+		<li id="cold">cold</li>
+	</ul>
+
+	
+</body>
+
+<script>
+
+// getElementsByTagName('')
+//This is a dom query method
+// var elem = document.getElementById('another');
+// var ulPls = document.getElementById('bigList');
+
+// console.log(elem);
+// console.dir(typeof ulPls.children["0"]);
+
+// var elements = document.getElementsByClassName('hot');
+// //length mean = we have an array somewhere.
+// if (elements.length >= 1) {
+// 	// create a variable and reference the array
+// 	var firstItem = elements.item(0);
+// }
+// console.log(firstItem);
+
+
+// var elements = document.getElementsByTagName('p');
+
+
+//this target the list and the class name, if you want to specifically target something.
+// var elements = document.getElementById('another');
+// console.dir(elements);
+
+// console.log(elements);
+
+//Friday Checkpoint***
+
+//This is the start of a Iife
+(function(){
+
+	//1.function
+	function domQueryA(){
+		var ele = document.getElementById('hot');
+		// console.dir(ele);
+		ele.style.backgroundColor = "green";
+	}
+
+	domQueryA();
+
+	//2.function
+	function domQueryB(){
+		var elephant = document.getElementsByTagName("h1");
+		// console.dir(elephant);
+		elephant["0"].style.color = "pink";
+
+	}
+
+	domQueryB();
+
+	//3.function
+	function domQueryC(){
+		var panda = document.getElementsByClassName("summer")
+		console.dir(panda);
+		panda["0"].style.color = "orange";
+		panda["1"].style.color = "orange";
+		panda["2"].style.color = "orange";
+		panda["3"].style.color = "orange";
+
+		// this is a function within domQueryC function
+		panda["0"].onmouseover = function(){
+			this.style.color = "blue";
+		}
+		//this is also another function within this function.
+		panda["0"].onmouseout = function(){
+			this.style.color = "orange";
+		}
+	}
+
+	domQueryC();
+
+
+
+
+})(); //this is the end of a Iiffe
+
+
+
+
+
+
+
+</script>
+</html>

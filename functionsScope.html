@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Functions</title>
+
+
+</head>
+<body>
+
+<h1>Hello World</h1>
+
+
+	<script>
+
+		//This is the start of the Iiffe
+		(function(){
+
+			console.log("configObj");
+
+			//This is the start of the function declaration
+			function myFunction () {
+				var configObj = {
+					option1: 123, 
+					option2: 456
+				};
+
+				return configObj.option1;
+			}
+
+
+			console.log(myFunction());
+
+
+			function anotherFunction () {
+				var jar = {
+					lolly: 111,
+					mint: 222,
+				};
+				return jar.lolly;
+			}	
+
+			console.log(anotherFunction());
+
+
+
+
+		//You can invoke a function epression from above or below in the script/code
+		//**** see B
+		declarationA();
+
+		function declarationA(){
+			alert("Hoisted");
+		}
+
+		//****B
+		declarationA();
+
+		//Expression must be invoked after the function is written
+		//**A wil not work
+
+		//**A
+		var expressionA = function(){
+			//you cant
+			alert("hoisted EX");
+		}
+
+		//**B
+		expressionA();
+
+		
+		})(); //iife ends here
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conditional</title>
+</head>
+<style>
+	
+	h1 {
+		font-family: Arial;
+		color:pink;
+		font-size: 80px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	input{
+		margin-left: 500px;
+	}
+	
+	p {
+		font-family: Arial;
+		color: blue;
+		font-size: 80px;
+		margin: 0 auto;
+		text-align: center;
+
+	}
+
+</style>
+<body>
+
+<h1> Baby Name Generator</h1>
+
+<input id="myInput" type="text">
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>	
+	
+</body>
+	<script>
+		//My testing variables
+		function myFunction(){
+		var letter = document.getElementById("myInput").value;
+		var text;
+
+		if (letter === "c") {
+			text = "Charlie";
+
+		} else if (letter === "a") {
+			text = "Abraham";
+
+		} else if (letter === "x" || letter === "z") {
+			text = "Sorry there are no names available";
+
+		} else if (letter === "g" || letter=== "h") {
+			text = "you are having a boy";
+		
+		} else {
+			text = "try again!";
+		}
+
+
+		
+		document.getElementById("demo").innerHTML = text;
+		}
+
+		//my array of items for testing
+		// var myArray = [5, 10, 15, 20, 25, 30, false, true];
+
+
+		// console.log(c > b && d > c);
+
+		// if (true) {
+		// 	console.log(f===f);
+		// 			}
+
+		// if (true) {
+		// 	console.log("string" > f || f > c );
+		// }
+
+		//&& means and
+		//|| double pipes mean "or"
+		//< less then, > greater then
+		// = equals === == is the same
+		//! logical not != not then true
+
+		
+			
+			
+
+
+
+	</script>
+</html>
